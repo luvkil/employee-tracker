@@ -1,33 +1,43 @@
+USE employee_trackerdb;
 -- inserting into table id and names of departments
+
 INSERT INTO department (name)
-VALUES ("accounting");
+VALUES ("Software Development");
 INSERT INTO department (name)
-VALUES ("software_engineer");
+VALUES ("Maintanance");
 INSERT INTO department (name)
-VALUES ("human_resource");
+VALUES ("Accounting");
 INSERT INTO department (name)
-VALUES ("maintenance");
-INSERT INTO department (name)
-VALUES ("design");
+VALUES ("Design");
 
 -- insert into roles table
-INSERT INTO roles ( title, salary, department_id ) VALUES ('accontant', '50.05', 2); -- yourColumnName DECIMAL(TotalDigit,DigitAfterDecimalPoint);
-INSERT INTO roles ( title, salary, department_id  ) VALUES ('web_developer', '75.05', 4);
-INSERT INTO roles ( title, salary, department_id) VALUES ('human_resource', '40.05', 6);
-INSERT INTO roles ( title, salary, department_id) VALUES ('electrician', '70.05', 8);
-INSERT INTO roles ( title, salary,department_id ) VALUES ('lead_designer', '90.05', 10);
-INSERT INTO roles (title, salary,department_id ) VALUES ('assistant_designer','45.45', 12);
+INSERT INTO role (title, salary, department_id)
+VALUES ("Electricina", 100000, 1);
+INSERT INTO role (title, salary, department_id)
+VALUES ("Lead Engineer", 150000, 2);
+INSERT INTO role (title, salary, department_id)
+VALUES ("Software Engineer", 120000, 2);
+INSERT INTO role (title, salary, department_id)
+VALUES ("Accountant", 125000, 3);
+INSERT INTO role (title, salary, department_id)
+VALUES ("Designer", 250000, 4);
+
 -- insert into employee table
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ('john', 'wayne', 2, 8);
-INSERT INTO employee (first_name, last_name, role_id, manager_id )
-VALUES ('sick_head', 'joe', 10, 12);
+VALUES ("John", "Doe", 1, 3);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ('shelly', 'mangolo', 6, null );
+VALUES ("jackey", "Chan", 2, 1);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ('steven', 'knight', 8, null);
+VALUES ("oprah", "winfrey", 3, null);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ('jackie', 'chang', 5, null);
+VALUES ("Kevin", "costner", 4, 3);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ('simon', 'freak', 12, 4);
+VALUES ("julia", "Roberts", 5, null);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("angela", "jolin", 2, null);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("denzel", "washington", 4, 7);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Christian", "renoldo", 1, 2);
+
